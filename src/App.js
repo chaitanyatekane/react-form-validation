@@ -54,7 +54,9 @@ function App() {
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">Signed in successfully</div>
       ) : (
-        <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+        // JavaScript object or value to a JSON string
+        // JSON.stringify(value, replacer, space)
+        <pre>{JSON.stringify(formValues, undefined, 3)}</pre>
       )}
 
       <form onSubmit={handleSubmit}>
@@ -66,7 +68,7 @@ function App() {
             <input
               type="text"
               name="username"
-              placeholder="Username"
+              placeholder="Enter Username Here"
               value={formValues.username}
               onChange={handleChange}
             />
@@ -77,7 +79,7 @@ function App() {
             <input
               type="text"
               name="email"
-              placeholder="Email"
+              placeholder="Enter Email Here"
               value={formValues.email}
               onChange={handleChange}
             />
@@ -88,7 +90,7 @@ function App() {
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Enter Password Here"
               value={formValues.password}
               onChange={handleChange}
             />

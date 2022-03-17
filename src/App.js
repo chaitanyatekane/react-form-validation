@@ -23,6 +23,7 @@ function App() {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formErrors]);
 
   const validate = (values) => {
